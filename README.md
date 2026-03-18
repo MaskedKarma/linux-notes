@@ -14,3 +14,10 @@ I'm hopefully going to university to study Computer Science. I want to work in C
 - File permissions and processes
 - Bash scripting
 - Networking fundamentals 
+
+## Resources I'm using
+- Linux Journey
+- The Odin Project
+- Automate the Boring Stuff with Python
+- TechWorld with Nana (Docker/DevOps)
+- CS50
