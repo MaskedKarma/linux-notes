@@ -24,7 +24,6 @@ software runs on.
 - **Automate the Boring Stuff** — Python scripting
 - **TechWorld with Nana** — Docker, Kubernetes, DevOps concepts
 
-## Future changes
-- **Add more goals** Once I've learnt the basics, expand what I want to do - Cybersecurity, malware testing, AI/ML, Data scrapers + quant projects, etc.
-- **Eventually add links to projects within different domains** For example some of the above.
-- **Come back to this constantly** Keep this updated and new. 
+## Planned additions
+- **Links to projects:** Projects should be linked as they're built.
+- **Expanded topics:** Topics like security, ML, data engineering, etc.
