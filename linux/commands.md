@@ -2,8 +2,6 @@
 
 Commands I'm learning, with explanations.
 
-# Linux Commands
-
 ## Navigation
 | Command | What it does | Example |
 |---------|-------------|---------|
