@@ -16,7 +16,56 @@ I'm hopefully going to university to study Computer Science. I want to work in C
 - Networking fundamentals 
 
 ## Resources I'm using
-- Linux Journey
-- The Odin Project
-- Automate the Boring Stuff with Python
-- CS50
+1. CS50
+
+Use for: learning how programming works from first principles
+Why: great for total beginners, builds problem-solving
+How much: only selected parts if full course becomes too much
+Resource: Harvard CS50 on edX / YouTube
+
+2. Automate the Boring Stuff with Python
+
+Use for: beginner Python with practical scripts
+Why: perfect for your path, because DevOps uses scripting heavily
+Resource: free online book + YouTube/Udemy
+
+3. Python for Everybody
+
+Use for: gentle Python explanations if CS50 feels too intense
+Why: slower and more beginner-friendly
+Resource: Dr. Chuck
+
+4. The Odin Project Foundations
+
+Use for: command line / Git / general dev basics
+Why: very beginner-friendly, practical
+
+5. Linux Journey / Learn Linux TV
+
+Use for: Linux basics and reinforcement
+Why: easier than reading dry documentation first
+
+6. Practical Networking / PowerCert
+
+Use for: networking basics
+Why: networking is essential for cloud/devops, and these explain it visually
+
+7. TechWorld with Nana
+
+Use for: Docker, Kubernetes, CI/CD, Terraform, DevOps concepts
+Why: one of the best beginner-to-intermediate DevOps channels
+
+8. Stephane Maarek + Tutorial Dojo
+
+Use for: AWS cert prep
+Why: this is the standard combo many people use successfully
+
+9. HashiCorp Learn
+
+Use for: Terraform basics from the source
+Why: clean and practical
+
+10. KodeKloud
+
+Use for: Kubernetes later
+Why: beginner-friendly and practical labs
