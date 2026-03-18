@@ -19,5 +19,4 @@ I'm hopefully going to university to study Computer Science. I want to work in C
 - Linux Journey
 - The Odin Project
 - Automate the Boring Stuff with Python
-- TechWorld with Nana (Docker/DevOps)
 - CS50
