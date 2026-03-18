@@ -7,9 +7,9 @@ Learning log tracking my journey toward a career in Cloud and DevOps engineering
 **Goal:** Become proficient in Linux, Python, Docker, AWS, and Terraform by graduation.
 
 ## Why I'm doing this
-I'm going to university to study Computer Science. I want to work in Cloud or 
-DevOps engineering, building and maintaining the infrastructure that modern 
-software runs on.
+I'm building a strong foundation in Cloud and DevOps engineering through 
+self-directed study alongside my formal education. I'm drawn to automation, infrastructure, and the engineering behind how software runs at scale. 
+This repo tracks that progress, mainly focused on study notes.
 
 ## Structure
 - `linux/` — command line, permissions, processes, Bash scripting
