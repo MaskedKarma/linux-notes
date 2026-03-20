@@ -39,25 +39,38 @@ Commands I'm learning, with explanations.
 | `grep -i "text" file` | Case-insensitive search | `grep -i "linux" README.md` |
 | `grep -r "text" .` | Search recursively through all files | `grep -r "mkdir" .` |
 | `grep -n "text" file` | Show line numbers with matches | `grep -n "cd" commands.md` |
+| `grep -c "text" file` | Count matching lines | `grep -c "Command" commands.md` |
 
 ## Permissions
 | Command | What it does | Example |
 |---------|-------------|---------|
 | `ls -la` | Show permissions for all files | `ls -la` |
-| `chmod 755 file` | Set rwx for owner, rx for others | `chmod 755 script.sh` |
-| `chmod 644 file` | Set rw for owner, r for others | `chmod 644 config.txt` |
-| `chmod 600 file` | Set rw for owner only | `chmod 600 secret.txt` |
+| `chmod 600 file` | Owner read/write only — for secrets | `chmod 600 .env` |
+| `chmod 644 file` | Owner read/write, everyone read | `chmod 644 index.html` |
+| `chmod 755 file` | Owner full, everyone read/execute | `chmod 755 deploy.sh` |
+| `chmod +x file` | Add execute permission | `chmod +x script.sh` |
 
 ## Permissions reference
-- r = read = 4
-- w = write = 2  
-- x = execute = 1
-- 7 = rwx, 6 = rw-, 5 = r-x, 4 = r--
+- `r` = read = 4
+- `w` = write = 2
+- `x` = execute = 1
+- `7` = rwx (full), `6` = rw-, `5` = r-x, `4` = r--
+- First character of ls -la: `-` = file, `d` = directory
+- Three groups: owner / group / everyone else
 
 ## Processes
 | Command | What it does | Example |
 |---------|-------------|---------|
-| `ps` | Show processes in current session | `ps` |
-| `ps aux` | Show all running processes | `ps aux` |
-| `ps aux | grep name` | Find a specific process | `ps aux | grep firefox` |
-| `top` | Live view of system processes and resources | `top` |
+| `ps` | Show processes in current terminal session | `ps` |
+| `ps aux` | Show all running processes on the system | `ps aux` |
+| `ps aux \| grep name` | Find a specific running process | `ps aux \| grep firefox` |
+| `top` | Live view of system resources and processes | `top` |
+| `id` | Show your user ID and group | `id` |
+
+## Processes reference
+- PID = unique process ID number
+- %CPU = percentage of CPU being used
+- %MEM = percentage of RAM being used
+- TTY = which terminal the process is attached to (? = background)
+- STAT: S = sleeping, R = running, I = idle, < = high priority
+- The pipe `|` sends output of one command as input to another
