@@ -74,3 +74,48 @@ Commands I'm learning, with explanations.
 - TTY = which terminal the process is attached to (? = background)
 - STAT: S = sleeping, R = running, I = idle, < = high priority
 - The pipe `|` sends output of one command as input to another
+
+## Package Management
+| Command | What it does | Example |
+|---------|-------------|---------|
+| `sudo pacman -Syu` | Update package database and upgrade all packages | `sudo pacman -Syu` |
+| `sudo pacman -S package` | Install a package | `sudo pacman -S git` |
+| `sudo pacman -R package` | Remove a package | `sudo pacman -R git` |
+| `pacman -Ss term` | Search repositories for a package | `pacman -Ss python` |
+| `pacman -Qs term` | Search locally installed packages | `pacman -Qs python` |
+| `pacman -Qi package` | Show detailed info about installed package | `pacman -Qi python` |
+| `pacman -Qe` | List all explicitly installed packages | `pacman -Qe` |
+| `paru -S package` | Install from AUR or official repos | `paru -S visual-studio-code-bin` |
+| `paru -Syu` | Update everything including AUR packages | `paru -Syu` |
+
+## Users and Groups
+| Command | What it does | Example |
+|---------|-------------|---------|
+| `whoami` | Print current username | `whoami` |
+| `id` | Show UID, GID and all groups | `id` |
+| `groups` | Show groups current user belongs to | `groups` |
+| `cat /etc/passwd` | View all system users | `cat /etc/passwd` |
+| `cat /etc/group` | View all groups and members | `cat /etc/group` |
+| `sudo cat /etc/shadow` | View encrypted passwords (root only) | `sudo cat /etc/shadow` |
+
+## Users reference
+- UID = user ID number, every user has a unique one
+- GID = group ID number
+- wheel group = sudo access on Arch-based systems
+- Principle of least privilege: services run as limited users with only permissions they need
+
+## Disk Usage
+| Command | What it does | Example |
+|---------|-------------|---------|
+| `df -h` | Show disk space on all filesystems | `df -h` |
+| `du -sh folder` | Show total size of a folder | `du -sh ~` |
+| `du -sh folder/*` | Show size of each item in a folder | `du -sh ~/dev/*` |
+| `du -sh ~/* \| sort -h` | Show home folder sizes sorted by size | `du -sh ~/* \| sort -h` |
+
+## SSH reference (conceptual)
+- SSH = Secure Shell, lets you control remote computers from terminal
+- Uses public/private key pairs — private key stays on your machine, public key goes on server
+- Key-based auth is more secure than passwords — keys are not brute-forceable
+- `ssh-keygen -t ed25519` — generate a key pair (covered properly in AWS section)
+- `ssh username@ip` — connect to a remote server
+- Private key files must be chmod 600 — SSH refuses to work if permissions are too open
