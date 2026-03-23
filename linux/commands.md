@@ -118,4 +118,4 @@ Commands I'm learning, with explanations.
 - Key-based auth is more secure than passwords — keys are not brute-forceable
 - `ssh-keygen -t ed25519` — generate a key pair (covered properly in AWS section)
 - `ssh username@ip` — connect to a remote server
-- Private key files must be chmod 600 — SSH refuses to work if permissions are too open
+- Private key files must be chmod 600 — SSH refuses to work if permissions are too open 
