@@ -87,6 +87,7 @@ Commands I'm learning, with explanations.
 | `pacman -Qe` | List all explicitly installed packages | `pacman -Qe` |
 | `paru -S package` | Install from AUR or official repos | `paru -S visual-studio-code-bin` |
 | `paru -Syu` | Update everything including AUR packages | `paru -Syu` |
+| `sudo pacman -Rs package` | Remove a package and its unused dependencies | `sudo pacman -Rs htop` |
 
 ## Users and Groups
 | Command | What it does | Example |
