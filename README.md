@@ -9,7 +9,7 @@ Learning log tracking my journey toward a career in Cloud and DevOps engineering
 ## Why I'm doing this
 I'm building a strong foundation in Cloud and DevOps engineering through 
 self-directed study alongside my formal education. I'm drawn to automation, infrastructure, and the engineering behind how software runs at scale. 
-This repo will track my progress from now.
+This repo will track my progress.
 
 ## Structure
 - `linux/` — command line, permissions, processes, Bash scripting
