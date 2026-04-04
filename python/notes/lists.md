@@ -1,19 +1,17 @@
 ## Lists
-A list is an ordered collection of values stored in a single variable. They exist because most real data isn't a single value, it's a group of things. A list of servers, a list of usernames, a list of IP addresses.
+A list is an ordered collection of values stored in a single variable. Most real data isn't a single value — it's a group of things like servers, usernames, or IP addresses.
 
 ## Creating a List
-Lists are defined with square brackets, with each item separated by a comma. They can hold any data type, even mixed.
-
+Lists are defined with square brackets, items separated by commas. They can hold any data type, even mixed.
 ```python
 servers = ["web01", "web02", "db01"]
-ages = [25, 31, 47]
-mixed = ["admin", 3, True]
-empty = []
+ages    = [25, 31, 47]
+mixed   = ["admin", 3, True]
+empty   = []
 ```
 
 ## Accessing Items
-Lists are zero-indexed, the first item is at position 0, not 1. This is called indexing.
-
+Lists are zero-indexed — the first item is at position 0, not 1.
 ```python
 servers = ["web01", "web02", "db01"]
 print(servers[0])       # web01
@@ -26,8 +24,7 @@ print(servers[-2])      # web02
 ```
 
 ## Modifying a List
-`append()` adds an item to the end of the list.
-
+`append()` adds an item to the end.
 ```python
 servers.append("db02")  # ["web01", "web02", "db01", "db02"]
 ```
@@ -41,8 +38,7 @@ servers[0] = "web03"    # replaces web01 with web03
 ```
 
 ## Useful Methods
-`len()` returns the number of items in a list. Useful when looping or validating.
-
+`len()` returns the number of items. Useful when looping or validating.
 ```python
 print(len(servers))     # 3
 ```
@@ -50,7 +46,7 @@ print(len(servers))     # 3
 ```python
 servers.sort()          # ["db01", "web01", "web02"]
 ```
-`reverse()` reverses the current order of the list in place.
+`reverse()` reverses the current order in place.
 ```python
 servers.reverse()       # ["web02", "web01", "db01"]
 ```
@@ -61,8 +57,7 @@ print("web99" in servers)   # False
 ```
 
 ## Slicing
-Slicing extracts a portion of a list using `[start:stop]`. Start is included, stop is excluded, the same rule as `range()`.
-
+Slicing extracts a portion of a list using `[start:stop]`. Start is included, stop is excluded — same rule as `range()`.
 ```python
 servers = ["web01", "web02", "db01", "db02"]
 print(servers[0:2])     # ["web01", "web02"]
@@ -76,7 +71,6 @@ print(servers[2:])      # ["db01", "db02"]
 
 ## Looping Over a List
 You can loop directly over a list with a `for` loop, no index needed.
-
 ```python
 for server in servers:
     print(server)
@@ -84,5 +78,5 @@ for server in servers:
 If you need the index as well, use `enumerate()`.
 ```python
 for index, server in enumerate(servers):
-    print(index, server)    # 0 web01
-                            # 1 web02
+    print(index, server)    # 0 web01, 1 web02 ...
+```

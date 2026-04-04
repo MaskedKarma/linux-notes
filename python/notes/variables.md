@@ -1,53 +1,71 @@
+# Variables
+
 ## Variables
 A variable is a named container that stores a value.
 
-## Data Types
-Integer = An integer is a whole number. Typically used for full values such as age, time, etc.
-
 ```python
-1   4   12  1421
+name = "Adam"
+age = 25
 ```
 
-Float = A float is a number with a decimal. Usually for numbers that aren't whole. Height, currency, etc.
+## Data Types
+Integer = A whole number. Used for countable values like age, quantity, time.
+
+```python
+1   4   12   1421
+```
+Float = A number with a decimal. Used for values that aren't whole like height or currency.
 
 ```python
 3.14    12.42   25.14123
 ```
-
-String = A string is a collection of values in a '' or "", usually for names, passwords, etc.
-
-```python
-'hello'     '41'    'hello'     '3.12'      'true'
-```
-
-Boolean = A boolean is a value that is either True or False. Used in conditions and  comparisons.
+String = A sequence of characters in `''` or `""`. Used for names, messages, passwords.
 
 ```python
-True    False   0   1
+'hello'     '41'    'hello world'     '3.12'
 ```
+Boolean = A value that is either `True` or `False`. Used in conditions and comparisons.
+
+```python
+True    False
+```
+
 ## input()
-Input() is a way to interact with the user. It captures raw text. Even if you type a number '22' it'd take it as a string. Often for if you need to do maths with the value, you need to convert it first.
+`input()` captures text from the user as a string. Even if you type a number it comes back as a string — convert it first if you need to do maths with it.
 
 ```python
 name = input("What's your name? ")
 ```
+
 ## f-strings
-f-strings are strings that allow variables to be embedded within it.
+f-strings let you embed variables directly inside a string.
 
 ```python
-print(f"hey {name}")
+print(f"Hey {name}")
 ```
-## Type Conversion
-Type conversions are usually used when you want to change a value from one type to another. For example if asking for age using input.
 
-int() converts a value to an integer.
+## Type Conversion
+Type conversion changes a value from one type to another. Commonly used when taking input and needing a number.
+
+`int()` converts a value to an integer.
 
 ```python
 age = int(input("How old are you? "))
 ```
-
-float() converts a value to a float
+`float()` converts a value to a float.
 
 ```python
 currency = float(input("How much USD do you have? "))
+```
+`str()` converts a value to a string.
+
+```python
+message = "You are " + str(age) + " years old"
+```
+
+## .lower()
+`.lower()` converts a string to lowercase. Used on input to make comparisons reliable regardless of how the user typed it.
+
+```python
+language = input("What language? ").lower()
 ```
