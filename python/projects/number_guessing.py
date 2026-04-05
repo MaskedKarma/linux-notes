@@ -1,7 +1,7 @@
 import random
 import time
 
-def generate_number():
+def generate_number():          
     return random.randint(1, 100)
 
 number = generate_number()
@@ -10,7 +10,7 @@ games = 0
 total_guesses = 0
 attempts = 0
 
-while True:
+while True:                 # Gameplay loop block
     guess = input("Guess a number: ")
     if guess == 'quit':
         print("Thanks for playing!")
