@@ -3,6 +3,7 @@ Conditionals control which parts of your code run based on whether a condition i
 
 ## if / elif / else
 `if` runs a block when its condition is True. `elif` checks another condition if the one above was False. `else` is the fallback — it runs if nothing above matched.
+
 ```python
 age = int(input("How old are you? "))
 has_id = input("Do you have ID (yes/no)? ")
@@ -18,6 +19,7 @@ else:
 ```
 
 ## Comparison Operators
+
 ```python
 ==    # equal to
 !=    # not equal to
@@ -29,6 +31,7 @@ else:
 
 ## = vs ==
 `=` assigns a value to a variable. `==` checks whether two values are equal.
+
 ```python
 age = 18        # assigns 18 to age
 age == 18       # checks if age is equal to 18 — returns True or False
@@ -36,6 +39,7 @@ age == 18       # checks if age is equal to 18 — returns True or False
 
 ## Logical Operators
 `and` requires all conditions to be True.
+
 ```python
 if age >= 18 and has_id == "yes":   # both must pass
     print("Access granted")
