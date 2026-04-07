@@ -3,6 +3,7 @@ A list is an ordered collection of values stored in a single variable. Most real
 
 ## Creating a List
 Lists are defined with square brackets, items separated by commas. They can hold any data type, even mixed.
+
 ```python
 servers = ["web01", "web02", "db01"]
 ages    = [25, 31, 47]
@@ -12,12 +13,14 @@ empty   = []
 
 ## Accessing Items
 Lists are zero-indexed — the first item is at position 0, not 1.
+
 ```python
 servers = ["web01", "web02", "db01"]
 print(servers[0])       # web01
 print(servers[1])       # web02
 ```
 Negative indexing counts from the end. -1 is always the last item.
+
 ```python
 print(servers[-1])      # db01
 print(servers[-2])      # web02
@@ -25,14 +28,17 @@ print(servers[-2])      # web02
 
 ## Modifying a List
 `append()` adds an item to the end.
+
 ```python
 servers.append("db02")  # ["web01", "web02", "db01", "db02"]
 ```
 `remove()` removes the first matching value.
+
 ```python
 servers.remove("web02") # ["web01", "db01", "db02"]
 ```
 You can replace an item directly by assigning to its index.
+
 ```python
 servers[0] = "web03"    # replaces web01 with web03
 ```
@@ -57,7 +63,8 @@ print("web99" in servers)   # False
 ```
 
 ## Slicing
-Slicing extracts a portion of a list using `[start:stop]`. Start is included, stop is excluded — same rule as `range()`.
+Slicing extracts a portion of a list using `[start:stop]`. Start is included, stop is excluded — same rule as `range()
+
 ```python
 servers = ["web01", "web02", "db01", "db02"]
 print(servers[0:2])     # ["web01", "web02"]
@@ -71,6 +78,7 @@ print(servers[2:])      # ["db01", "db02"]
 
 ## Looping Over a List
 You can loop directly over a list with a `for` loop, no index needed.
+
 ```python
 for server in servers:
     print(server)
