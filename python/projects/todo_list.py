@@ -43,74 +43,93 @@ while True:
     if choice == 1:
         print("What task would you like to add?")
         tasks_add = input()
-        tasks.append(tasks_add)
+        tasks.append({"name": tasks_add, "done": False})
     elif choice == 2:
         while True:
-            print("What task would you like to remove?")
+            if not tasks:
+                print("You have no tasks yet.")
+                print()
+                print()
+                break
+            else:
+                print("What task would you like to remove?")
+                print()
+                print()
+                print()
+                for i, task in enumerate(tasks):
+                    status = "✓" if task["done"] else "✗"
+                    print(f"{i}. [{status}] {task['name']}")
+                print("Please choose the index assigned to your task.")
+                tasks_remove_input = input()
+                result_r = invalid_choice(tasks_remove_input)
+                if result_r is None:
+                        print("Sorry, please put in a number!")
+                        print()
+                        print()
+                        attempts = check_attempts(attempts)
+                        break
+                tasks_remove = int(result_r)
+                if option_length(tasks_remove):
+                    print(f"Are you sure '{tasks[tasks_remove]['name']}' is the correct task?")
+                else:
+                    print("That number isn't on the list!")
+                    print()
+                    print()
+                    break
+                print("1 for yes | 2 for no")
+                print()
+                print()
+                print()
+                answer = input()
+                result_agree = invalid_choice(answer)
+                if result_agree is None:
+                    print("Sorry, please put in a number!")
+                    print()
+                    print()
+                    attempts = check_attempts(attempts)
+                    break
+                if answer == '1':
+                    tasks.pop(tasks_remove)
+                    break
+                elif answer == '2':
+                    print("No worries. Nothing was deleted.")
+                    print()
+                    print()
+    elif choice == 3:
+        if not tasks:
+            print("You have no tasks yet.")
+        else:
+            print()
+            print()
             for i, task in enumerate(tasks):
-                print(f"{i}  {task}")
-            print("Please choose the index assigned to your task.")
-            tasks_remove_input = input()
-            result_r = invalid_choice(tasks_remove_input)
-            if result_r is None:
+                status = "✓" if task["done"] else "✗"
+                print(f"{i}. [{status}] {task['name']}")
+    elif choice == 4:
+        while True:
+            if not tasks:
+                print("You have no tasks yet.")
+                break
+            else:
+                for i, task in enumerate(tasks):
+                    status = "✓" if task["done"] else "✗"
+                    print(f"{i}. [{status}] {task['name']}")
+                print("Which task have you finished?")
+                complete_input = input()
+                complete = invalid_choice(complete_input)
+                if complete is None:
                     print("Sorry, please put in a number!")
                     print()
                     print()
                     attempts = check_attempts(attempts)
                     continue
-            tasks_remove = int(result_r)
-            if option_length(tasks_remove):
-                print(f"Are you sure {tasks[tasks_remove]} is the correct task?")
-            else:
-                print("That number isn't on the list!")
-                print()
-                print()
-                continue
-            print("1 for yes | 2 for no")
-            print()
-            print()
-            print()
-            answer = input()
-            result_agree = invalid_choice(answer)
-            if result_agree is None:
-                print("Sorry, please put in a number!")
-                print()
-                print()
-                attempts = check_attempts(attempts)
-                continue
-            if answer == '1':
-                tasks.pop(tasks_remove)
-                break
-            elif answer == '2':
-                print("No worries. Nothing was deleted.")
-                print()
-                print()
-    elif choice == 3:
-        print()
-        print()
-        for i, task in enumerate(tasks):
-            print(f"{i + 1}. {task}")
-    elif choice == 4:
-        while True:
-            for i, task in enumerate(tasks):
-                print(f"{i} {task}")
-            print("Which task have you finished?")
-            complete_input = input()
-            complete = invalid_choice(complete_input)
-            if complete is None:
-                print("Sorry, please put in a number!")
-                print()
-                print()
-                attempts = check_attempts(attempts)
-                continue
-            if option_length(complete):
-                tasks[complete] = f"{tasks[complete]} completed."
-                break
-            else:
-                print("That number isn't on the list!")
-                print()
-                print()
-                continue
+                if option_length(complete):
+                    tasks[complete]["done"] = True
+                    break
+                else:
+                    print("That number isn't on the list!")
+                    print()
+                    print()
+                    continue
     elif choice == 5:
         print()
         print()
