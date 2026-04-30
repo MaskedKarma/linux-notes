@@ -3,25 +3,33 @@
 projectname=$1
 
 setup() {
-	        mkdir -p $projectname/{src,docs,tests} 
-		touch $projectname/README.md $projectname/.gitignore
+	mkdir -p "$projectname"/{src,docs,tests} 
+	touch "$projectname/README.md" "$projectname/.gitignore"
 }
 
-date=$(date)
 info() {
-		echo "Hi, current user is $USER with the host being $(hostname), it's currently $date."
+	echo ""
+	echo "User: $USER | Host: $(hostname) | Time: $(date)"
 }
 
 summary() {
-	echo "I have created a directory for '$projectname', a README, .gitignore, and sub-folders for src, docs and tests. Anything else?"
+	echo ""
+	echo "Created project '$projectname' with the following structure:"
+	ls "$projectname"/
+	echo ""
+	echo "README.md and .gitignore included. Anything else?"
 }
-
 
 if [ -z "$1" ]; then
 	echo "Usage: ./setup-dev-folder.sh <project-name>"
 	exit 1
-else
-	setup
-	info
-	summary
 fi
+
+if [ -d "$projectname" ]; then
+        echo "Error: '$projectname' already exists."
+        exit 1
+fi
+
+setup
+info
+summary
