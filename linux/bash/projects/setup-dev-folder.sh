@@ -17,7 +17,7 @@ summary() {
 	echo "Created project '$projectname' with the following structure:"
 	ls "$projectname"/
 	echo ""
-	echo "README.md and .gitignore included. Anything else?"
+	echo "README.md and .gitignore included."
 }
 
 if [ -z "$1" ]; then
