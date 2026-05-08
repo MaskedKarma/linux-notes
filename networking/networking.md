@@ -110,3 +110,16 @@ nslookup google.com
 ```bash
 traceroute google.com
 ```
+
+## TCP vs UDP 
+
+Analogy:
+TCP is a phone call: you dial, the other person picks up, you chat, you hang up. Every word arrives in order, and if a word is lost, you ask “can you repeat that?”.
+UDP is a postal service sending postcards: you fire them off and hope they arrive. You don’t get a confirmation; some might get lost or arrive out of order, but it’s faster because there’s no call setup or constant checking.
+
+Technical differences:
+
+    TCP: establishes a connection, numbers every byte, acknowledges received data, retransmits lost packets, flow‑control. Used for web browsing, email, file transfers, SSH – anything that needs 100% accuracy.
+    UDP: connectionless, no guaranteed delivery, no ordering, no overhead. Used for live streaming, VoIP, online gaming, DNS lookups – where speed matters more than perfect delivery (a missed video frame is less noticeable than a pause for retransmission).
+
+Why it matters in DevOps/cloud: DNS queries typically use UDP (fast, small), but fall back to TCP if the response is too large. Monitoring tools like ping use ICMP, not TCP or UDP, but knowing the difference helps when diagnosing packet loss or latency issues. Later, when you deploy load balancers or container networking, you’ll see TCP mode (Layer 4) and HTTP mode (Layer 7), which builds on TCP.
