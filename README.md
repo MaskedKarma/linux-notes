@@ -16,6 +16,8 @@ This repo will track my progress.
 - `python/` — basics, scripting, automation
 - `networking/` — DNS, HTTP, TCP/IP, ports
 - `docker/` — containers, Dockerfiles, Compose
+- `CS50/` - CS fundementals, mental outlook
+- `CrashCourse/` - IT Hardware and general computer knowledge
 
 ## Resources I'm using
 - **The Odin Project** — command line, Git, general dev basics
