@@ -1,0 +1,3 @@
+## CS50
+
+In Binary 000 is 0, 001, is 1, 010 is 2, 011 is 3, 100 is 4, 101 is 5, 110 is 6 and 111 is 7. These are bits, for binary digits, they represent different numbers via different patterns that we know as decimal numbers from 0-9 (dec implying 10 for those 10 digits). In everything electric there are some number of switches known as 'transistors' using these computers can count really quickly by turning it on (1) or off (0). 

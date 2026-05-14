@@ -23,6 +23,8 @@ This repo will track my progress.
 - **Practical Networking / PowerCert** — networking for cloud/devops
 - **Automate the Boring Stuff** — Python scripting
 - **TechWorld with Nana** — Docker, Kubernetes, DevOps concepts
+- **CS50** - Overall CS fundementals
+- **FreeCodeCamp YT and site** - IT fundementals and other skills
 
 ## Planned additions
 - **Links to projects:** Projects should be linked as they're built.
